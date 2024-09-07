@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Remote Debugging with gdbserver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tests/tests", // Change to your compiled program path
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerServerAddress": "localhost:1234", // Replace with remote machine IP and gdbserver port
+            "miDebuggerPath": "/usr/bin/gdb", // Adjust if needed, depends on your system
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

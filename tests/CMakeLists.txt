@@ -2,6 +2,7 @@ link_libraries(criterion)
 
 add_executable(tests
     test_binary_search.c
+    test_binary_search_2d.c
 )
 
 target_include_directories(tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include)

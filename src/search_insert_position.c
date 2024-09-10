@@ -1,29 +1,22 @@
 #include <search_insert_position.h>
 
 int searchInsert(int* nums, int numsSize, int target) {
-    int position = 0;
-    int after = -1;
-    int before = numsSize;
+    int start = 0;
+    int end = numsSize -1;
     int mid = 0;
 
-    while (after <= before)
+    while (start <= end)
     {
-        mid = (after + before)/2;
+        mid = (start + end)/2;
         if(nums[mid] == target)
         {
-            position = after + 1;
             return mid;
         } else if ( nums[mid] < target)
         {
-            after = mid;
+            start = mid+1;
         } else {
-            before = mid;
-        }
-        position = after + 1;
-        if ( position == before)
-        {
-            return before;
+            end = mid-1;
         }
     }
-    return position;
+    return start;
 }

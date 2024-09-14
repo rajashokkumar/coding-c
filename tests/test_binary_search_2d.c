@@ -2,7 +2,7 @@
 
 #include <criterion/criterion.h>
 
-Test(binary_search_2d, test_1) {
+Test(binary_search_2d, bs_test_1) {
     int matrix [3][4] = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
     int *mat[3];
     mat[0] = &matrix[0][0];

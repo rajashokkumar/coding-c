@@ -2,7 +2,7 @@
 
 #include <criterion/criterion.h>
 
-Test(binary_search, test_mid) {
+Test(binary_search, bs_test_mid) {
     int arr[] = {1, 2, 3, 4, 5};
     auto n = 5;
     auto x = 3;
@@ -11,7 +11,7 @@ Test(binary_search, test_mid) {
     cr_assert_eq(expected, actual, "Expected %d but got %d", expected, actual);
 }
 
-Test(binary_search, test_low) {
+Test(binary_search, bs_test_low) {
     int arr[] = {1, 2, 3, 4, 5};
     auto n = 5;
     auto x = 1;
@@ -20,7 +20,7 @@ Test(binary_search, test_low) {
     cr_assert_eq(expected, actual, "Expected %d but got %d", expected, actual);
 }
 
-Test(binary_search, test_high) {
+Test(binary_search, bs_test_high) {
     int arr[] = {1, 2, 3, 4, 5};
     auto n = 5;
     auto x = 5;
@@ -29,7 +29,7 @@ Test(binary_search, test_high) {
     cr_assert_eq(expected, actual, "Expected %d but got %d", expected, actual);
 }
 
-Test(binary_search, test_not_found) {
+Test(binary_search, bs_test_not_found) {
     int arr[] = {1, 2, 3, 4, 5};
     auto n = 5;
     auto x = 6;

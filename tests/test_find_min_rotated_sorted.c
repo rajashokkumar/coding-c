@@ -35,3 +35,13 @@ Test(find_min_rotated_sorted, test_4) {
     auto actual = findMin(arr, size);
     cr_assert_eq(expected, actual, "Expected %d but got %d", expected, actual);
 }
+
+
+
+Test(find_min_rotated_sorted, test_5) {
+    int arr[] = {3,1,2};
+    auto size = sizeof(arr)/sizeof(arr[0]);
+    auto expected = 1;
+    auto actual = findMin(arr, size);
+    cr_assert_eq(expected, actual, "Expected %d but got %d", expected, actual);
+}

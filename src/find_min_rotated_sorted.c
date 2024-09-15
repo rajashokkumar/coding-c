@@ -2,14 +2,20 @@
 
 int findMin(int* nums, int numsSize)
 {
-     int start = 0;
+    int start = 0;
     int end = numsSize -1;
     int mid = 0;
     int target = -1;
+    int currmin = nums[0];
+    int min = currmin;
 
     while(start <= end)
     {
         mid = (start + end)/2;
+        currmin = nums[mid];
+        if (currmin < min)
+            min = currmin;
+
         if (nums[mid] == target)
         {
             return mid;
@@ -47,5 +53,9 @@ int findMin(int* nums, int numsSize)
             }
         } 
     }
-    return nums[start];
+    currmin = nums[start];
+
+    if (currmin < min)
+        min = currmin;
+    return min;
 }
